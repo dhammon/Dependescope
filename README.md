@@ -1,1 +1,1 @@
-# Dependascope
+# Dependescope
