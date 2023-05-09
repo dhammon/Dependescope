@@ -68,9 +68,9 @@ python3 dependescope.py --package-file-path=/path/to/package.json --output-forma
 python3 dependescope.py \
     --package-file-path=/path/to/package.json \
     --score-threshold=50 \
-    --security-threshold=2
-    --popularity-threshold=1
-    --maintenance-threshold=1
+    --security-threshold=2 \
+    --popularity-threshold=1 \
+    --maintenance-threshold=1 \
     --community-threshold=1
 ```
 

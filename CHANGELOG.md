@@ -1,4 +1,4 @@
-# Dependascope Changelog
+# Dependescope Changelog
 > Current Version: 0.0.1-alpha
 
 # 0.0.1-alpha / May 8th 2023
