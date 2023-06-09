@@ -26,6 +26,7 @@
     "dependencies": {
       "autoprefixer": "^6.3.6",
       "babel-core": "^6.9.0",
-      "webpack-merge": "^1.0.2"
+      "webpack-merge": "^1.0.2",
+      "@types/jest": "^26.0.15"
     }
   }

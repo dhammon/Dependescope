@@ -43,7 +43,7 @@ class Scraper:
         if results[0].lower() not in allowed_strings:
             print("[-] Snyk Reponse - Registry invalid")
             exit(254)
-        pattern = re.compile(r"^[A-Za-z0-9\-\_\.]{1,30}$")
+        pattern = re.compile(r"^[A-Za-z0-9\-\_\.\@\/]{1,30}$")
         if not re.fullmatch(pattern, results[1]):
             print("[-] Snyk Response - Package invalid")
             exit(254)

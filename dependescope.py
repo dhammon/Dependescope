@@ -7,4 +7,5 @@ from src.client import run
 
 if __name__ == "__main__":
     # file deepcode ignore PT: Validated downstream
+    # deepcode ignore Ssrf: Validated downstream
     exit(run(argv[1:]))

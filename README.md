@@ -140,3 +140,5 @@ Snyk Advisor - https://snyk.io/advisor/
 - yarn support
 - go support
 - Github Action example
+- pyproject.toml support
+- announce version in banner

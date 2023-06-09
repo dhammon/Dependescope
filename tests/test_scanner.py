@@ -15,7 +15,7 @@ class TestScanner(unittest.TestCase):
         path = path_check.dirname(__file__) + "/files/package.json"
         scan_results = Scanner.scan(registry, path)
         assert type(scan_results) == list
-        assert len(scan_results) == 3
+        assert len(scan_results) == 4
 
     def test_validate_registry_happy(self):
         expected = ""
