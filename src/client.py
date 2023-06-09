@@ -67,6 +67,7 @@ def run(inputs):
         output_format = args.output_format
         registry = FileHelper.find_registry_type(path)
         # file deepcode ignore PT: Validated downstream
+        # deepcode ignore Ssrf: Validated downstream
         scan_results = Scanner.scan(registry, path)
         results = Analyzer.analyze(scan_results)
         Reporter.output_results(results, output_format)

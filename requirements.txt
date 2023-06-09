@@ -1,4 +1,4 @@
 beautifulsoup4==4.12.2
 prettytable==3.7.0
-requests==2.22.0
+requests==2.31.0
 validators==0.20.0

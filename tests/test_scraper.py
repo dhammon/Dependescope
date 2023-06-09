@@ -9,10 +9,10 @@ from contextlib import redirect_stdout
 
 class TestScraper(unittest.TestCase):
     
-    def test_check_snyk_advisor_happy(self):
+    def test_check_snyk_advisor_happy_string(self):
         result = Scraper.check_snyk_advisor("npm-package", "lol")
         assert result == ["npm-package", 'lol', '42', 'No known security issues', 'Limited', 'Inactive', 'Limited', 'https://snyk.io/advisor/npm-package/lol']
-    
+
     def test_check_snyk_advisor_sad(self):
         f = StringIO()
         with redirect_stdout(f):
@@ -20,11 +20,16 @@ class TestScraper(unittest.TestCase):
                 Scraper.check_snyk_advisor("npm-package", "doesnotexistandshouldresultinexitcode")
         f.close
 
-    def test_validate_snyk_results_happy(self):
+    def test_validate_snyk_results_happy_string(self):
         results = ["npm-package", 'lol', '42', 'No known security issues', 'Limited', 'Inactive', 'Limited', 'https://snyk.io/advisor/npm-package/lol']
         result = Scraper.validate_snyk_results(results)
         assert result == ""
-    
+
+    def test_validate_snyk_results_happy_special(self):
+        results = ["npm-package", '@types/jest', '42', 'No known security issues', 'Limited', 'Inactive', 'Limited', 'https://snyk.io/advisor/npm-package/lol']
+        result = Scraper.validate_snyk_results(results)
+        assert result == ""
+
     def test_validate_snyk_results_sad_registry(self):
         results = ["doesnotexist", 'lol', '42', 'No known security issues', 'Limited', 'Inactive', 'Limited', 'https://snyk.io/advisor/npm-package/lol']
         f = StringIO()

@@ -29,7 +29,7 @@ class TestFileHelper(unittest.TestCase):
         assert result == "npm-package"
     
     def test_get_npm_packages_happy(self):
-        expected = ['autoprefixer', 'babel-core', 'webpack-merge']
+        expected = ['autoprefixer', 'babel-core', 'webpack-merge', '@types/jest']
         path = path_check.dirname(__file__) + "/files/package.json"
         result = FileHelper.get_npm_packages(path)
         assert result == expected
